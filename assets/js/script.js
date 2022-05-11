@@ -48,16 +48,15 @@ $('.list-group').on('click', "p", function() {
   var text = $(this)
     .text()
     .trim();
-  console.log(text)
   let textInput = $("<textarea>")
     .addClass("form-control")
     .val(text)
   $(this).replaceWith(textInput)
   textInput.trigger('focus');
 });
-
+// blur event fires when an element has lost focus // user clicks away from the target element
 $('.list-group').on("blur", 'textarea', function() {
-  // get the textarea's current value/text
+  //  the textarea's current value/text
   var text = $(this)
     .val()
     .trim()
